@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Animal</title>
+    <style>
+        :root {
+            --bg-light: #ffffff;
+            --bg-dark: #1a1a1a;
+            --text-light: #000000;
+            --text-dark: #f0f0f0;
+            --green: #76c893;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--green);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #e8f5e9;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav button {
+            background-color: var(--green);
+            border: none;
+            color: white;
+            margin: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+        }
+
+        nav button:hover {
+            background-color: #57ab7e;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .animal {
+            margin-bottom: 40px;
+        }
+
+        .animal img {
+            max-width: 100%;
+            border-radius: 20px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px 0;
+        }
+
+        .carousel img {
+            width: 300px;
+            border-radius: 20px;
+            flex-shrink: 0;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--green);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .dark-mode {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+
+        footer {
+            background-color: var(--green);
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media (max-width: 600px) {
+            nav button {
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Mundo Animal</h1>
+        <p>“Amar a los animales es quererte a ti mismo”</p>
+        <button onclick="toggleDarkMode()">🌙 Modo Oscuro</button>
+    </header>
+
+    <nav>
+        <button onclick="scrollToSection('mamiferos')">Mamíferos</button>
+        <button onclick="scrollToSection('aves')">Aves</button>
+        <button onclick="scrollToSection('reptiles')">Reptiles</button>
+        <button onclick="scrollToSection('marinos')">Marinos</button>
+        <button onclick="scrollToSection('insectos')">Insectos</button>
+        <button onclick="scrollToSection('curiosidades')">Curiosidades</button>
+    </nav>
+
+    <section id="carrusel">
+        <h2>Carrusel de Imágenes</h2>
+        <div class="carousel">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Lion_waiting_in_Namibia.jpg" alt="León">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Sea_turtle_swimming.jpg" alt="Tortuga">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Hummingbird.jpg" alt="Colibrí">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Butterfly_Papilio.jpg" alt="Mariposa">
+        </div>
+    </section>
+
+    <!-- Mamíferos -->
+    <section id="mamiferos">
+        <h2>🐾 Mamíferos</h2>
+        <div class="animal">
+            <h3>🦁 León</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Lion_waiting_in_Namibia.jpg" alt="León">
+            <p>El "León" puede referirse a:
+                El animal: Un gran mamífero carnívoro de la familia de los félidos, también conocido como "Rey de la
+                Selva", que vive en África y Asia.
+                La ciudad española: La capital de la provincia de León, en la comunidad autónoma de Castilla y León,
+                España.
+                La ciudad mexicana: León de los Aldama, en Guanajuato, México.
+                El león animal es famoso por su melena (especialmente en los machos) y su papel como principal
+                depredador en la sabana africana. Son animales sociales que viven en manadas. La ciudad de León en
+                España es conocida por su historia y arquitectura, incluyendo la Catedral de León. La ciudad de León en
+                México es un importante centro industrial y comercia</p>
+        </div>
+        <div class="animal">
+            <h3>🐘 Elefante</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/African_Bush_Elephant.jpg" alt="Elefante">
+            <p>Los elefantes son mamíferos herbívoros terrestres, caracterizados por su gran tamaño, sus largas trompas
+                y sus grandes orejas en forma de abanico. Son los animales terrestres más grandes del planeta y se
+                organizan en manadas.
+                Características:
+                Tamaño: Los elefantes africanos, los más grandes, pueden alcanzar hasta 4 metros de altura y pesar más
+                de 6 toneladas.
+                Trompa: La trompa es un órgano versátil que les permite agarrar objetos, beber agua, comunicarse y más.
+                Orejas: Sus grandes orejas les ayudan a regular la temperatura corporal.
+                Presas: Las presas de marfil son utilizadas para defenderse y levantar objetos.
+                Inteligencia: Los elefantes son reconocidos por su alta inteligencia y memoria.
+                Comportamiento social: Viven en grupos liderados por hembras.
+                Hábitat: Existen tres especies de elefantes: el elefante africano (de la sabana y de la selva) y el
+                elefante asiático.
+                Información adicional:
+                Los elefantes africanos pueden llegar a vivir hasta 70 años.
+                Las hembras alcanzan la madurez sexual a los 12 años y pueden tener crías cada 4 años aproximadamente.
+                La caza furtiva y la pérdida de hábitat amenazan a las poblaciones de elefantes. </p>
+        </div>
+    </section>
+
+    <!-- Aves -->
+    <section id="aves">
+        <h2>🦜 Aves</h2>
+        <div class="animal">
+            <img src="imagenes/imagen colibri.jpeg" alt="colibri"
+                width="530"
+            <h3>🐦 Colibrí</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Hummingbird.jpg" alt="Colibrí">
+            <p>Un colibrí es una ave americana de la familia de los troquílidos, también conocidos como picaflores,
+                chuparrosas, tucusitos, pájaros mosca, ermitaños o quindes. Se caracterizan por su tamaño pequeño,
+                plumaje colorido y brillantes, y su habilidad para flotar en el aire mientras buscan néctar de las
+                flores.
+                Características principales:
+                Tamaño:
+                Son aves extremadamente pequeñas, algunas especies pueden medir solo unos pocos centímetros.
+                Plumaje:
+                Tienen un plumaje vibrante y brillante, a menudo con tonos iridiscentes que cambian de color según la
+                luz.
+                Vuelo:
+                Pueden volar en diferentes direcciones, incluso hacia atrás, y flotar en el aire mientras buscan comida.
+                Alimentación:
+                Se alimentan principalmente de néctar de flores, pero también pueden comer pequeños insectos y arañas.
+                Polinización:
+                Son importantes agentes polinizadores para muchas plantas, ya que golpean los estambres de las flores
+                con su plumaje y adhieren el polen.
+                Hábitat:
+                La mayoría de los colibríes viven en bosques lluviosos o siempreverdes, pero también se encuentran en
+                otros hábitats como páramos, manglares y sabanas.
+                Distribución:
+                Se encuentran en América, desde Alaska hasta el archipiélago de Tierra del Fuego.
+                Otros nombres comunes:
+                Picaflor, Chuparrosa, Tucusito, Pájaro mosca, Ermitaño, Quinde.
+                Interesante:
+                Los colibríes pueden visitar entre 500 y 3000 flores por día.
+                Su lengua es muy larga y bifurcada, y está controlada por muchos músculos en el cráneo del colibrí, lo
+                que les permite succionar el néctar.
+                En algunas culturas, los colibríes representan alegría, sanación y adaptabilidad. </p>
+        </div>
+        <div class="animal">
+            <img src="imagenes/imagen agila.jpeg" alt="aguila"
+                width="450"
+            <h3>🦅 Águila</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Bald_Eagle_Portrait.jpg" alt="Águila">
+            <p>Las águilas son aves de presa majestuosas y poderosas, conocidas por su vuelo rápido y su visión aguda.
+                Son una parte importante de la naturaleza y han sido utilizadas como símbolos de poder y libertad por
+                diferentes culturas a lo largo de la historia.
+                Características de las Águilas:
+                Aves de Presa:
+                Las águilas pertenecen a la familia Accipitridae y son aves rapaces diurnas, lo que significa que cazan
+                durante el día.
+                Fuerza y Poder:
+                Son conocidas por su fuerza y poder, con fuertes picos y garras que les permiten cazar y agarrar presas.
+                Vuelo Rápido:
+                Tienen un vuelo muy rápido y ágil, lo que les permite desplazarse grandes distancias y cazar con
+                facilidad.
+                Visión Aguda:
+                Su visión es extremadamente aguda, lo que les permite detectar a sus presas a largas distancias.
+                Simbolismo Cultural:
+                Las águilas han sido consideradas símbolos de poder, libertad, y valentía por diferentes culturas a lo
+                largo de la historia.
+                Ejemplos de Águilas:
+                Águila Real:
+                Una de las águilas más comunes y conocidas, con un aspecto majestuoso y poderoso.
+                Águila Imperial:
+                Una especie en peligro de extinción, con plumas de color claro en la cabeza y el cuello.
+                Hábitats y Dieta:
+                Amplia Distribución:
+                Las águilas se encuentran en una gran variedad de hábitats, desde bosques hasta montañas y llanuras.
+                Dieta Variada:
+                Su dieta incluye una gran variedad de animales, como pequeños mamíferos, aves, reptiles y peces.
+                Amenazas y Conservación:
+                Pérdida de Hábitat:
+                La pérdida de hábitat y la fragmentación de los ecosistemas son una amenaza para las águilas.
+                Caza y Comercio Ilegal:
+                La caza y el comercio ilegal de aves rapaces, incluyendo águilas, también son una amenaza.
+                Conservación:
+                Es importante tomar medidas para proteger a las águilas y sus hábitats, como la creación de áreas
+                protegidas y la lucha contra el comercio ilegal. </p>
+        </div>
+    </section>
+
+    <!-- Reptiles -->
+    <section id="reptiles">
+        <h2>🐍 Reptiles</h2>
+        <div class="animal">
+            <img src="imagenes/imagen tortuga.jpeg" alt="tortuga marina"
+                width="640"
+            <h3>🐢 Tortuga Marina</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Sea_turtle_swimming.jpg" alt="Tortuga Marina">
+            <p>Las tortugas son reptiles del orden Testudines, también conocidos como quelonios. Son animales ovíparos
+                que se caracterizan por tener un caparazón protector, patas cortas y longevidad. Algunas especies son
+                herbívoras, otras omnívoras y algunas más carnívoras.
+                Características generales:
+                Caparazón: Es una estructura ósea que protege los órganos vitales del animal. Está compuesto por el
+                caparazón dorsal y el plastrón ventral.
+                Patas cortas: Son adaptaciones para la vida terrestre o acuática, dependiendo de la especie.
+                Longevidad: Algunas especies de tortugas pueden vivir hasta 100 años o más.
+                Ovíparas: Las tortugas ponen huevos y los incuban en nidos cavados en la tierra.
+                Dieta: Depende de la especie, pero algunas son herbívoras (planta), omnívoras (planta y animales) o
+                carnívoras (animales).
+                Tipos de tortugas:
+                Tortugas terrestres:
+                Son aquellas que viven en la tierra y se caracterizan por tener patas cortas y fuertes.
+                Tortugas de agua dulce:
+                Viven en ríos, lagos y estanques, y tienen patas adaptadas para la natación.
+                Tortugas marinas:
+                Viven en el océano y son grandes y fuertes, con patas adaptadas para la natación.
+                Dónde viven:
+                Las tortugas se pueden encontrar en una gran variedad de ecosistemas, desde bosques y desiertos hasta
+                lagos y mares.
+                Importancia:
+                Las tortugas son una parte importante de los ecosistemas en los que viven. Son depredadoras o presas, y
+                ayudan a mantener el equilibrio de la naturaleza. También son una fuente de alimento para algunos
+                animales, como los cocodrilos.
+                Amenazas:
+                Las tortugas están amenazadas por diversas causas, como la pérdida de hábitat, la caza y la
+                contaminación. Es importante tomar medidas para proteger a estas especies y asegurar su supervivencia.
+            </p>
+        </div>
+        <div class="animal">
+            <img src="imagenes/imagen cocodirlo.jpeg" alt="cocodirlo"
+                width="425"
+            <h3>🐊 Cocodrilo</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Crocodile_in_water.jpg" alt="Cocodrilo">
+            <p>Los cocodrilos son reptiles prehistóricos con una larga historia de adaptación a diferentes hábitats. Son
+                depredadores semiacuáticos que se encuentran en ríos, lagos, humedales e incluso en agua salobre. Se
+                caracterizan por sus fuertes mandíbulas, dientes afilados y una poderosa mordida.
+                Características y curiosidades:
+                Origen:
+                Los cocodrilos han existido durante más de 200 millones de años.
+                Hábitat:
+                Son animales acuáticos que se adaptan a diferentes tipos de agua, incluyendo agua dulce y salobre.
+                Aparición:
+                Su aspecto es plano, alargado y con protuberancias óseas en el dorso para protección.
+                Movilidad:
+                Son excelentes nadadores, utilizando su cola como timón. En tierra, pueden arrastrarse, caminar, correr
+                e incluso trepar árboles.
+                Alimentación:
+                Son carnívoros y se alimentan de vertebrados (peces, reptiles, mamíferos) e incluso de invertebrados.
+                Adaptaciones:
+                Tienen ojos, oídos y ventanas de nariz ubicados en la parte superior de la cabeza para facilitar la
+                respiración bajo el agua.
+                Regulación de temperatura:
+                Los cocodrilos no sudan, pero regulan su temperatura jadeando, como los perros.
+                Estómago ácido:
+                Su estómago es el más ácido de cualquier vertebrado, lo que les ayuda a digerir incluso huesos y pelo.
+                Determinación del sexo:
+                El sexo de los cocodrilos es determinado por la temperatura del ambiente durante el desarrollo del
+                huevo, no por cromosomas sexuales.
+                Partenogénesis:
+                En algunos casos, las hembras de cocodrilo pueden reproducirse sin necesidad de apareamiento, fenómeno
+                llamado partenogénesis.
+                Mordida:
+                Pueden ser muy peligrosos, especialmente para los seres humanos, y su mordida es muy fuerte.
+                Dientes:
+                Los cocodrilos pierden y cambian sus dientes a lo largo de su vida, llegando a tener más de 3.000
+                dientes en total.
+                Velocidad:
+                Pueden alcanzar velocidades de hasta 40 km/h en el agua propulsados por su cola.
+                En resumen, los cocodrilos son reptiles adaptados al medio acuático, con características físicas y
+                comportamentales que les permiten sobrevivir y reproducirse en diversos ecosistemas. </p>
+        </div>
+    </section>
+
+    <!-- Marinos -->
+    <section id="marinos">
+        <h2>🐳 Animales Marinos</h2>
+        <div class="animal">
+            <img src="imagenes/imagen tiburon.fpeg" alt="tiburon"
+                width="520"
+            <h3>🦈 Tiburón</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Great_white_shark_south_africa.jpg"
+                alt="Tiburón">
+            <p>Los tiburones son peces cartilaginosos con una gran diversidad de especies, que van desde el tiburón
+                ballena, el pez más grande del mundo, hasta pequeñas especies de las profundidades. Son peces de gran
+                importancia ecológica, actuando como depredadores y reguladores de los ecosistemas marinos.
+                Características:
+                Equeleto cartilaginoso:
+                A diferencia de otros peces, los tiburones tienen un esqueleto hecho de cartílago en lugar de huesos.
+                Dentículos:
+                Su cuerpo está cubierto por pequeñas escamas con forma de diente, los dentículos.
+                Siete sentidos:
+                Además de los cinco sentidos comunes, poseen sentido eléctrico (detectan corrientes eléctricas) y una
+                línea lateral (sensible a la presión).
+                Depredadores eficaces:
+                Utilizan sus sentidos, como el olfato y la visión, para detectar presas y orientarse en el agua.
+                Diversidad:
+                Existen más de 500 especies de tiburones, que se encuentran en todos los océanos del mundo.
+                Importancia ecológica:
+                Superdepredadores: Los tiburones ayudan a mantener el equilibrio en los ecosistemas marinos al controlar
+                las poblaciones de otras especies.
+                Indicadores de salud: Su presencia o ausencia puede ser un indicador de la salud del océano.
+                Impacto en los arrecifes de coral: La pérdida de tiburones puede llevar a un declive de los arrecifes de
+                coral y a la dominación de algas.
+                Ejemplos de especies:
+                Tiburón blanco: Uno de los tiburones más conocidos, con dientes grandes y afilados.
+                Tiburón ballena: El pez más grande del mundo, se alimenta de plancton.
+                Tiburón martillo: Con una cabeza en forma de martillo, lo que les ayuda a detectar a sus presas.
+                Tiburón mako: Un tiburón rápido y ágil, considerado uno de los más peligrosos. </p>
+        </div>
+        <div class="animal">
+            <img src="imagenes/imagen delfin.jpeg" alt="delfin"
+                width="400"
+            <h3>🐬 Delfín</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Dolphin1.jpg" alt="Delfín">
+            <p>Los delfines son mamíferos marinos del orden Cetacea, suborden Odontoceti, familia Delphinidae. Son
+                conocidos por su inteligencia y habilidades de comunicación, incluyendo el uso de ecolocalización,
+                saltos y danzas.
+                Existen varias especies de delfines, como el delfín común (Delphinus delphis), el delfín franciscana
+                (Pontoporia blainvillei), y otros que se encuentran en aguas dulces.
+                Características de los delfines:
+                Apariencia: Los delfines tienen un cuerpo hidrodinámico, con una aleta dorsal, dos aletas laterales y
+                una cola aplanada para nadar.
+                Comunicación: Utilizan sonidos y ecolocalización para comunicarse y orientarse.
+                Inteligencia: Se considera que son una de las especies más inteligentes del planeta.
+                Alimentación: Son carnívoros, comiendo principalmente peces, calamares y otras presas marinas.
+                Hábitat: Viven en océanos y mares, aunque algunas especies se han adaptado a ríos y estuarios.
+                Amenazas: Las principales amenazas a los delfines son la contaminación, la pesca incidental y el cambio
+                climático.
+                Curiosidades sobre los delfines:
+                Algunos delfines pueden nadar a velocidades de más de 30 km/h.
+                Los delfines pueden sumergirse hasta 300 metros y aguantar la respiración durante casi 25 minutos.
+                Duermen por partes, lo que les permite estar alerta y vigilar a su grupo.
+                En cautiverio, pueden vivir más de 30 años. </p>
+        </div>
+    </section>
+
+    <!-- Insectos -->
+    <section id="insectos">
+        <h2>🦋 Insectos</h2>
+        <div class="animal">
+            <img src="imagenes/imagen mariposa.jpeg" alt="mariposa"
+            width="400"
+            <h3>🦋 Mariposa Monarca</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Butterfly_Papilio.jpg" alt="Mariposa">
+            <p>Las mariposas son insectos de alas coloreadas que pasan por un ciclo de vida fascinante, conocido como
+                metamorfosis, y son importantes polinizadores. Sus alas están cubiertas de escamas que les dan su color
+                y textura.
+                Características de las mariposas:
+                Metamorfosis:
+                Las mariposas pasan por cuatro etapas: huevo, larva (oruga), pupa (crisálida) y adulto.
+                Alas:
+                Las alas están cubiertas de escamas que les dan su color y textura.
+                Sentidos:
+                Tienen sentidos muy desarrollados, incluyendo el tacto, gusto, olfato, vista y oído.
+                Alimentación:
+                Se alimentan de néctar de flores a través de una trompa llamada espiritrompa.
+                Polinización:
+                Ayudan a la polinización de las plantas al transportar polen de una flor a otra.
+                Hábitat:
+                Se encuentran en diversos hábitats, especialmente en áreas con mucha vegetación y flores.
+                Diversidad:
+                Existe una gran diversidad de especies de mariposas, con Colombia siendo el país con más especies en el
+                mundo.
+                Migración:
+                Algunas especies, como la mariposa monarca, realizan migraciones largas a través de grandes distancias.
+            </p>
+        </div>
+        <div class="animal">
+            <img src="imagenes/imagen abeja.jpeg" alt="abeja"
+                width="400"
+            <h3>🐝 Abeja</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Honey_bee_on_flower.jpg" alt="Abeja">
+            <p>Las abejas son insectos sociales, polinizadores esenciales, y producen miel, cera, propóleo y jalea real.
+                Viven en colonias organizadas en una jerarquía con reina, obreras y zánganos. Realizan una polinización
+                vital para la supervivencia de muchas plantas y cultivos.
+                Características de las abejas:
+                Sociales y organizadas:
+                Viven en colonias con roles definidos para la reina, obreras y zánganos.
+                Polinizadoras:
+                Ayudan a la reproducción de plantas y cultivos, lo que es vital para la biodiversidad y el suministro de
+                alimentos.
+                Productores de miel, cera y otros:
+                Son conocidas por producir miel, cera, propóleo y jalea real, productos utilizados por los humanos.
+                Comunicación compleja:
+                Usan la danza para comunicarse entre sí sobre la ubicación de fuentes de alimento.
+                Rendimiento:
+                Cada abeja puede visitar miles de flores al día para producir miel, y se necesita una gran cantidad de
+                trabajo para producir un kilo de miel.
+                Diversidad:
+                Existen miles de especies y subespecies de abejas en el mundo, adaptadas a diferentes hábitats.
+                Importancia de las abejas:
+                Polinización de cultivos:
+                La polinización de las abejas es esencial para la producción de alimentos, incluyendo frutas, verduras y
+                nueces.
+                Mantenimiento de la biodiversidad:
+                Ayudan a la reproducción de muchas plantas y especies silvestres.
+                Producción de miel y otros productos:
+                La miel, la cera y la jalea real son productos naturales valiosos para la alimentación y la medicina.
+                Regulación del clima:
+                La polinización de las abejas contribuye a la producción de oxígeno y a la captura de carbono. </p>
+        </div>
+    </section>
+
+    <!-- Curiosidades -->
+    <section id="curiosidades">
+        <h2>💡 Curiosidades del Mundo Animal</h2>
+        <ul>
+            <li>🦑 El calamar gigante puede tener ojos tan grandes como un balón de fútbol.</li>
+            <li>🐙 El pulpo tiene tres corazones.</li>
+            <li>🦎 Algunas especies de lagartijas pueden regenerar su cola.
+            <li>🐢 Las tortugas pueden vivir más de 150 años.</li>
+            <li>🦇 Los murciélagos son los únicos mamíferos que pueden volar.</li>
+            <li>🐘 El elefante es el único animal que no puede saltar.</li>
+            <li>🐳 La ballena azul es el animal más grande que ha existido, más grande que cualquier    dinosaurio.</li>
+            <li></li>🐜 Las hormigas no duermen jamás.
+            <li>🦒 La lengua de la jirafa puede medir hasta 50 cm y es de color azul.</li>
+            <li>🦔 El erizo puede tener más de 5000 púas.</li>
+            <li>🐇 Los conejos pueden ver casi en 360 grados, excepto justo enfrente de su nariz.</li>
+            <li>🦍 Los gorilas comparten más del 98% de su ADN con los humanos.</li>
+            <li>🦕 Los dinosaurios dominaron la Tierra durante más de 160 millones de años.</li>
+            <li>🐠 Algunos peces pueden cambiar de sexo durante su vida.</li>
+            <li>🦇 Los murciélagos son los únicos mamíferos capaces de volar.</li>
+            <li>🦎 Los dragones de Komodo tienen saliva venenosa.</li>
+        </ul>
+    </section>
+
+    <!-- Ejemplo de espacio para anuncios -->
+    <div style="text-align:center; padding: 20px; background-color:#f9f9f9;">
+        <!-- Aquí pegarás el código de Google Adsense cuando lo tengas -->
+        <p><strong>Espacio para anuncios de Google AdSense</strong></p>
+    </div>
+
+    <button class="back-to-top" onclick="scrollToTop()">⬆</button>
+
+    <footer>
+        <p>Mundo Animal - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+        }
+
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+
+</html>
